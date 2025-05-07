@@ -148,8 +148,7 @@ function animate() {
     confettiMesh.setMatrixAt(i, dummy.matrix);
   }
   confettiMesh.instanceMatrix.needsUpdate = true;
-
+}
   renderer.render(scene, camera);
-
 }
 })();
