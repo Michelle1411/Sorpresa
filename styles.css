@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: radial-gradient(circle farthest-corner, hsl(159, 95%, 8%), hsl(320deg, 100%, 2%) 100%);
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+h1 {
+  font-size: max(35px, 7vw);
+  text-shadow: 1px 1px black;
+  mix-blend-mode: difference;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  max-width: 90%;
+  z-index: 2;
+}
+
+.image-container img {
+  width: 120px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.image-container img:hover {
+  transform: rotateY(20deg) rotateX(10deg) translateY(-10px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    width: 100px;
+    height: 180px;
+  }
+}
