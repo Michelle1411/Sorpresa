@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, 
+body {
   background: radial-gradient(circle farthest-corner, hsl(159, 95%, 8%), hsl(320deg, 100%, 2%) 100%);
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;
@@ -24,7 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
+
 }
 
 h1 {
