@@ -55,14 +55,13 @@ body {
 }
 
 .img5 {
-  top: 25%;
-  left: 25%;
+  top: 0;
+  left: 0;
   width: 50%;
   height: 50%;
   background-image: url('images/imagen5.jpg');
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  transform: rotate(-5deg);
-  z-index: 1;
+  }
+  
 }
 
 h1 {
