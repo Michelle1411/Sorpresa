@@ -64,18 +64,10 @@ body {
   justify-content: center;
  
 }
-
 h1 {
   font-size: max(35px, 7vw);
   text-shadow: 1px 1px rgb(223, 15, 15);
   mix-blend-mode: difference;
   z-index: 1;
   margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .image-container img {
-    width: 100px;
-    height: 180px;
-  }
 }
