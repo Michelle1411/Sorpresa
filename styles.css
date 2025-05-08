@@ -7,7 +7,7 @@
 }
 
 html, body {
-  background: radial-gradient(circle farthest-corner, hsl(4, 87%, 15%), hsl(320deg, 100%, 2%) 100%);
+  background: radial-gradient(circle farthest-corner, hsl(4, 88%, 7%), hsl(320deg, 100%, 2%) 100%);
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;
 }
