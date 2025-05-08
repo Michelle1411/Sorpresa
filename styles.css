@@ -30,14 +30,6 @@ body {
   pointer-events: none;
 }
 
-.img1 {
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  background-image: url('images/imagen1.jpg');
-}
-
 .img2 {
   top: 0;
   right: 0;
@@ -79,4 +71,10 @@ h1 {
   mix-blend-mode: difference;
   z-index: 2;
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .image-container img {
+    width: 200px;
+    height: 280px;
+  }
 }
