@@ -1,50 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 
-* {
+body{
   margin: 0;
   min-height: 100vh;
   display: grid;
   place-items: center;
 }
 
-lery{
-    --size: 100px;
-    display:grid;
-    grid-template-columns: repeat(5,var(--size));
-    grid-auto-rows: var(--size);
-    place-items: start center;
-    gap: 5px;
+.gallery{
+  --size: 100px;
+  display:grid;
+  grid-template-columns: repeat(6,var(--size));
+  grid-auto-rows: var(--size);
+  margin-bottom: var(--size);
+  place-items: start center;
+  gap: 5px;
 
-    &:has(:hover) img:not(:hover),
-    &:has(:focus) img:not(:focus){
-        filter: brightness(0.5) contrast(0.5);
-    }
+  &:has(:hover) img:not(:hover),
+  &:has(:focus) img:not(:focus){
+      filter: brightness(0.5) contrast(0.5);
+  }
 
-    img{
-        object-fit: cover;
-    width: calc(var(--size)*2);
-        height: calc(var(--size)*2);
-        clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
-        transition: clip-path 0.25s, filter 0.75s;
-        grid-column: auto / span 2;
-        border-radius: 5px;
-        &:nth-child(5n-1){
-            grid-column: 2/span 2;
-          }
-          &:hover,
-          &:focus{
-              clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
-              z-index: 1;
-              transition: clip-path 0.25s, filter 0.25s;
-          }
-          &:focus{
-            outline: 1px dashed black;
-            outline-offset: -5px;
-        }
-    }
+  & img {
+      object-fit: cover;
+      width: calc(var(--size)*2);
+      height: calc(var(--size)*2);
+      clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
+      transition: clip-path 0.25s, filter 0.75s;
+      grid-column: auto / span 2;
+      border-radius: 5px;
+      &:nth-child(5n-1){
+          grid-column: 2/span 2;
+      }
+      &:hover,
+      &:focus{
+          clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+          z-index: 1;
+          transition: clip-path 0.25s, filter 0.25s;
+      }
+      &:focus{
+          outline: 1px dashed black;
+          outline-offset: -5px;
+      }
+  }
 }
-
-
 html, body {
   background: radial-gradient(circle farthest-corner, hsl(1, 85%, 13%), hsl(320deg, 100%, 2%) 100%);
   overscroll-behavior-x: none;
@@ -68,23 +67,10 @@ body {
 
 h1 {
   font-size: max(35px, 7vw);
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px rgb(223, 15, 15);
   mix-blend-mode: difference;
   z-index: 1;
   margin-bottom: 10px;
-}
-
-canvas {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 0;
 }
 
 @media (max-width: 768px) {
